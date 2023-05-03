@@ -1,0 +1,514 @@
+#header{
+    height: 72px;
+    width: 100%; 
+    display: flex;
+    padding: 0.8rem 1.6rem;
+    background-color: var(--red-color);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.home{
+    
+}
+.home a{
+    display: block;
+}
+.home__logo{
+    width: 60px;
+    margin-top: -2px;
+    display: inline-block;
+}
+.header__nav{
+    width: 100%;
+}
+.nav__first{
+   padding-left: 16px;
+}
+.nav__first li{
+    list-style: none;
+    line-height: 36px;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 550;
+}
+.nav__first li a{
+    text-decoration: none;
+    color: rgb(228 213 213);
+    margin-left: 2rem;
+    display: inline-block;
+}
+
+.nav__first li a::after{
+    content: " ";
+    display: block;
+    height: 4px;
+    background-color: var(--white-color);
+    transform: scale(0);
+    transition: all 0.5s;
+}
+
+.nav__first li a:hover::after{
+    transform: scale(1);
+}
+#header .header__search{ 
+    width: 10%;
+}
+.header__icon{
+    color: var(--white-color);
+    font-size: 24px;
+    float: right;
+    padding: 24px;
+    margin-top: -8px;
+}
+.header__icon:hover{
+    opacity: 0.5;
+}
+#slider{
+    padding-top: 50%;
+    background: url('/assets/img/Silder1.jpg') top center / cover no-repeat ;
+}
+
+#first-team{
+    margin: 0 200px;
+    padding-top: 72px;
+}
+
+.content-section{
+}
+.content-section-team{
+    height: 30px;
+    font-size: 30px;
+    margin-left: -80px;
+    display: inline-block;
+    position: relative;
+}
+.content-section-manager{
+    height: 30px;
+    font-size: 30px;
+    margin-left: 120px;
+    display: inline-block;
+    position: relative;
+}
+.content-section-legend{
+    height: 30px;
+    font-size: 30px;
+    margin-left: 120px;
+    display: inline-block;
+    position: relative;
+}
+.content-section-trophy{
+    height: 30px;
+    font-size: 30px;
+    margin-left: 120px;
+    display: inline-block;
+    position: relative;
+}
+
+.content-section-manager::after ,
+.content-section-legend::after ,
+.content-section-trophy::after ,
+.content-section-team::after
+{ 
+    content: "";
+    display: inline-block;
+    width: 100%;
+    border-bottom: 4px solid red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.name-position{
+    height: 20px;
+    font-size: 20px;
+    border-bottom : solid 1px #d8d8d8;
+    margin: 20px 0 16px;
+}
+.content-section-team-img-position{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+}
+.content-section-team-full-info{
+    display: inline-block;
+    overflow: hidden; /* Ẩn phần bị tràn ra ngoài */
+    position: relative; /* Định vị tương đối để tạo hover cho con trỏ */
+}
+.player-img{
+    width: 240px;
+    height: 220px;
+    border-radius: 10px;
+    flex-basis: calc(25% - 20px);
+    max-width: 100%;
+    margin: 12px 18px 12px 18px;
+    transition: transform 0.3s ease-in; /* Hiệu ứng zoom trong 0.3s */
+}
+.content-section-team-full-info:hover{
+    transform: scale(1.05); /* Tăng kích thước lên 105% */
+    cursor: pointer;
+}
+
+.player-full-info{
+    position: absolute;
+    top: 51%;
+    left: 10%;
+    color: var(--white-color);
+}
+.player-number{
+    font-size: 14px;
+    border-bottom: solid red;
+    margin: 8px 8px;
+    display: block;
+    width: 28px;
+    font-weight: 700;
+    text-shadow: 1px 2px 2px #000000; /* độ đậm, vị trí và màu bóng */
+}
+.player-name{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    width: 67%;
+    text-shadow: 1px 2px 2px #000000; /* độ đậm, vị trí và màu bóng */
+}
+
+#manager{
+    padding-top: 72px;
+}
+.manager-visual-full-info{
+    position: relative;
+}
+.manager-img{
+    height: 550px;
+    margin-top: 50px;
+}
+.manager-visual-img{
+    background-color: #3f3f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.manager-visual-name{
+    position: absolute;
+    top: 103px;
+    margin-left: 160px;
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+}
+.manager-visual-country{
+    position: absolute;
+    top: 212px;
+    display: flex;
+    margin-left: 160px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.manager-visual-country-flag {
+    width: 30px; /* Điều chỉnh kích thước tùy ý */
+    height: 20px;
+    position: relative;
+}
+  
+.manager-visual-country-flag .red-stripe {
+    width: 100%;
+    height: 33.33%;
+    background-color: #ae1c28; /* Màu đỏ */
+}
+  
+.manager-visual-country-flag .white-stripe {
+    width: 100%;
+    height: 33.33%;
+    background-color: #FFFFFF; /* Màu trắng */
+    top: 33.33%;
+    position: absolute;
+}
+  
+.manager-visual-country-flag .blue-stripe {
+    width: 100%;
+    height: 33.33%;
+    background-color: #21468b; /* Màu xanh */
+    top: 66.66%;
+    position: absolute;
+}
+.manager-visual-country-name{
+    line-height: 23px;
+    padding-left: 12px;
+}
+.manager-visual-birth{
+    position: absolute;
+    top: 320px;
+    display: flex;
+    margin-left: 160px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 240px;
+    line-height: 36px;
+}
+.manager-visual-join{
+    position: absolute;
+    top: 449px;
+    display: flex;
+    margin-left: 160px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 324px;
+    line-height: 36px;
+}
+.manager-visual-matches{
+    right: 20px;
+    position: absolute;
+    margin-right: 160px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    top: 103px;
+}
+.manager-visual-wins{
+    position: absolute;
+    right: 51px;
+    top: 212px;
+    display: flex;
+    margin-right: 160px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.manager-visual-trophy-number{
+    position: absolute;
+    top: 312px;
+    right: -43px;
+    display: flex;
+    margin-right: 160px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 180px;
+    line-height: 36px;
+}
+.main-cup{
+    position: absolute;
+    top: 400px;
+    right: 0px;
+    display: flex;
+    width: 324px;
+    height: 64px;
+}
+.sub-cup{
+    position: absolute;
+    top: 500px;
+    right: 0px;
+    display: flex;
+    width: 324px;
+    height: 64px;
+}
+.bio-manager-title{
+    padding: 0 240px;
+    font-size: 20px;
+}
+.info-bio{
+    border-bottom: grey solid 1px;
+    padding: 0 240px;
+}
+.bio-manager-content{
+    padding: 16px 240px 0;
+    line-height: 16px;
+    font-size: 14px;
+}
+.bio-manager-text-1{
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+.bio-manager-text-2{
+    margin-bottom: 24px;
+}
+#legend{
+    padding-top: 72px;
+}
+.content-section-legend-img-position{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 44px 44px 0 44px;
+    background-color: #3f3f3f;
+}
+.content-section-legend-full-info{
+    display: inline-block;
+    overflow: hidden; /* Ẩn phần bị tràn ra ngoài */
+    position: relative; /* Định vị tương đối để tạo hover cho con trỏ */
+}
+.legend-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    flex-basis: calc(25% - 20px);
+    max-width: 100%;
+    margin: 10px;
+    transition: transform 0.3s ease-in; /* Hiệu ứng zoom trong 0.3s */
+}
+.content-section-legend-full-info:hover{
+    transform: scale(1.05); /* Tăng kích thước lên 105% */
+    cursor: pointer;
+}
+
+.legend-full-info{
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    color: var(--white-color);
+}
+.legend-name{
+    letter-spacing: -0.8px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 31px;
+    width: 67%;
+    text-shadow: 1px 2px 2px #000000; /* độ đậm, vị trí và màu bóng */
+}
+.legend-number{
+    border-bottom: solid red;
+    margin: 4px 0;
+    display: block;
+    width: 28px;
+}
+#trophy-cup{
+    height: 72px;
+    background-color: #3f3f3f;
+}
+.trophy-visual-full-info{
+    
+}
+.trophy-visual-img{
+    position: relative;
+}
+.trophy-all{
+    width: 100%;
+}
+.trophy-title{
+    position: absolute;
+    top: 0;
+    left: 36px;
+    color: white;
+    font-size: 44px;
+    line-height: 40px;
+    text-shadow: 1px 2px 2px #000000;
+}
+.trophy-text{
+    font-size: 24px;
+    text-align: center;
+    padding: 0px 400px;
+    line-height: 40px;
+}
+.trophy-intro-content{
+    display: flex;
+}
+.trophy-intro-content-left{
+    flex: 1;
+}
+.trophy-intro-content-right{
+    flex: 1;
+}
+.trophy-img{
+    width: 100%;
+    display: block;
+}
+.trophy-intro-about{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.trophy-logo{
+    position: absolute;
+    z-index: -1;
+    top: 80px;
+}
+.trophy-name-epl{
+    color: rgb(54, 13, 58);
+    font-size: 44px;
+    top: 190px;
+    position: absolute;
+}
+.trophy-name-c1{
+    color: rgb(0, 0, 0);
+    font-size: 44px;
+    top: 190px;
+    position: absolute;
+}
+.trophy-name-c2{
+    color: #e93f00;
+    font-size: 44px;
+    top: 190px;
+    position: absolute;
+}
+.trophy-name-fa{
+    color: #e5010a;
+    font-size: 44px;
+    top: 190px;
+    position: absolute;
+}
+.trophy-name-carabao{
+    color: #00965e;
+    font-size: 44px;
+    top: 190px;
+    position: absolute;
+}
+.trophy-name-cs{
+    color: #02264c;
+    font-size: 44px;
+    top: 190px;
+    position: absolute;
+}
+.trophy-name-fifa{
+    color: #d6a503;
+    font-size: 44px;
+    top: 190px;
+    position: absolute;
+}
+.trophy-newsfeed{
+    position: absolute;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0px 64px;
+    top: 260px;
+}
+.background-bonus{
+    color: white;
+    height: 24px;
+}
+
+#footer{
+    position: relative;
+    height: 140px;
+    background-color: #2a2a2a;
+}
+.contact{
+    display: flex;
+    height: 100%;
+    position: relative;
+    justify-content: center; /* căn giữa theo chiều ngang */
+    align-items: center; /* căn giữa theo chiều dọc */s
+}
+.contact-items{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact-items a{
+    text-decoration: none;
+    font-size: 24px;
+    padding: 8px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 8px;
+    background-color: #3f3f3f;
+}
+.contact-items a:hover{
+    background-color: #ae1c28;
+}
