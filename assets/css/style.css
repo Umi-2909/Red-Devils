@@ -66,9 +66,8 @@
 .header__icon:hover{
     opacity: 0.5;
 }
-#slider{
-    padding-top: 50%;
-    background: url('./assets/img/Silder1.jpg') top center / cover no-repeat ;
+#slider img{
+    width: 100%;
 }
 
 #first-team{
